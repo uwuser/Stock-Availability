@@ -9,7 +9,7 @@ def send_notification():
     while True:
 	current_time = now.strftime("%H:%M:%S")
 	print("Current Time =", current_time)
-	print("In Stock XC29")
+	print("XXX in Stock!")
         playsound('alarm.mp3')
 
 
@@ -25,12 +25,12 @@ def check_item_in_stock(page_html):
 
 
 def check_inventory():
-    url = "https://www.costco.ca/northrock-xc29-73.6-cm-%2829-in.%29-mountain-bike.product.100674055.html"
+    url = "XXX"
     page_html = get_page_html(url)
     if check_item_in_stock(page_html):
         send_notification()
     else:	
-        print("XC29 Out of stock still")
+        print("XXX out of stock!")
 
 while True:
     check_inventory()
